@@ -24,7 +24,7 @@ describe('sum', () => {
   });
 
   test('can add two negative numbers', () => {
-    expected = -20
+    expected = -20;
     actual = sum(-10, -10);
     expect(actual).toBe(expected)
   });
@@ -37,66 +37,101 @@ describe('sum', () => {
 
 });
 
+
 describe('subtract', () => {
 //2 tests for each
 
 test("should subtract all values", () => {
-  expect(calculator.subtract(10, 20, 30, -15)).toBe(45);
-})
+  expect = 5;
+  actual = subtract(5, 10)
+  expect(actual).toBe(expected);
+
+});
 
 test("should subtract values even when negative", () => {
-  expect(calculator.subtract(-20, -30, -5, -2)).toBe(-57)
-})
+  expect = -57;
+  actual = subtract(-20, -30, -5, -2)
+  expect(actual).toBe(expected);
 
 });
+
+
+
 
 describe('multiply', () => {
+
   test("should multiply all values", () =>{
-    expect(calculator.multipley(2, 3, 5)).toBe(30)
-  })
+    expect = 30;
+    actual = subtract(2, 3, 5);
+    expect(actual).toBe(expected);
+    
+  });
 
   test("should multiply all values even negatives", () =>{
-    expect(calculator.multiply(-2, -3, -5)).toBe(-10)
+    expect = -10;
+    actual = subtract(-2, -3, -5);
+    expect(actual).toBe(expected);
+    
 
 });
+
 
 describe('divide', () => {
+
   test("should divide all values", () =>{
-    expect(calculator.divide(200, 2, 5)).toBe(20)
-  })
+    expect = 20;
+    actual = subtract(200, 2, 5);
+    expect(actual).toBe(expected);
+   
+  });
 
   test("should divide all values even negatives", () =>{
-    expect(calculator.divide(-200, -2, -5)).toBe(-207)
+    expect = -207;
+    actual = subtract(-200, -2, -5);
+    expect(actual).toBe(expected);
 
 });
+
 
 describe('modulus', () => {
-  test("should .... all values", () =>{
-    expect(calculator.subtract(2, 3, 5)).toBe()
-  })
 
-  test("should .... all values even negatives", () =>{
-    expect(calculator.modulus(-2, -3, -5)).toBe(-)
+  test('modulus with no remainder returns 0', () => {
+    expected = 0;
+    actual = modulus(10, 5);
+    expect(actual).toBe(expected);
+  });
 
-});
+  test('modulus with remainder returns remainder', () => {
+    expected = 4;
+    actual = modulus(10, 6);
+    expect(actual).toBe(expected);
+  });
+
+
 
 describe('even', () => {
-  test("All values should be even", () =>{
-    expect(calculator.even(2, 4, 6)).toBe()
-  })
 
-  test("should multiply all values even negatives", () =>{
-    expect(calculator.even(-2, -4, -6)).toBe()
+  test("All even values should return true", () =>{
+    actual = even(12);
+    expect(actual).toBeTruthy();
+  });
 
-});
+  test('odd number returns false', () => {
+    actual = even(3);
+    expect(actual).toBeFalsy();
+  });
+
+
 
 describe('odd', () => {
 
-  test("should ..... all values", () =>{
-    expect(calculator.odd(1, 3, 5)).toBe()
-  })
+  test('odd number returns true', () => {
+    actual = odd(1);
+    expect(actual).toBeTruthy();
+  });
 
-  test("should .... all values even negatives", () =>{
-    expect(calculator.odd(-1, -3, -5)).toBe()
-
+  test('even number returns false', () => {
+    actual = odd(16);
+    expect(actual).toBeFalsy();
+  });
 });
